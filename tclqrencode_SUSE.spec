@@ -8,7 +8,7 @@ Version:       0.9
 Release:       1
 License:       BSD-2-License
 Group:         Development/Libraries/Tcl
-Source:        %{name}_%{version}.tar.gz
+Source:        %{name}-%{version}.tar.gz
 URL:           https://sites.google.com/site/ray2501/tclqrencode
 BuildRequires: autoconf
 BuildRequires: gcc
@@ -29,7 +29,7 @@ CCD.
 Tclqrencode is using libqrencode to encode string to be a EPS/PNG/SVG/XPM file.
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-%{version}
 
 %build
 CFLAGS="%optflags" ./configure \
