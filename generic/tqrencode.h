@@ -19,18 +19,18 @@
 EXTERN int	Tclqrencode_Init(Tcl_Interp * interp);
 
 
-int SETMODE_8BIT _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int SETCASESENSITIVE _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int SETKANJI _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int SETMICRO _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int SETDPI _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int SETLEVEL _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int SETSIZE _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int SETSTRUCTURED _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int SETFILETYPE _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int SETVERSION _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int SETFOREGROUND _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int SETBACKGROUND _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
-int QRENCODE _ANSI_ARGS_((ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]));
+int SETMODE_8BIT (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int SETCASESENSITIVE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int SETKANJI (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int SETMICRO (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int SETDPI (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int SETLEVEL (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int SETSIZE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int SETSTRUCTURED (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int SETFILETYPE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int SETVERSION (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int SETFOREGROUND (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int SETBACKGROUND (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
+int QRENCODE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[]);
 
 #endif

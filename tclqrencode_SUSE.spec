@@ -4,7 +4,7 @@
 
 Name:          tclqrencode
 Summary:       Tcl interface for libqrencode 
-Version:       0.9
+Version:       1.0
 Release:       1
 License:       BSD-2-License
 Group:         Development/Libraries/Tcl

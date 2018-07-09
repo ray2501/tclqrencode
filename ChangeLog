@@ -1,3 +1,8 @@
+2018-07-09  Danilo Chang <ray2501@gmail.com>
+
+    * Setup version to v1.0
+    * Remove _ANSI_ARGS_
+
 2018-03-05  Danilo Chang <ray2501@gmail.com>
 
     * Setup version to v0.9
