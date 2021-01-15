@@ -6,7 +6,7 @@ Name:          tclqrencode
 Summary:       Tcl interface for libqrencode 
 Version:       1.0
 Release:       1
-License:       BSD-2-License
+License:       BSD-2-Clause
 Group:         Development/Libraries/Tcl
 Source:        %{name}-%{version}.tar.gz
 URL:           https://sites.google.com/site/ray2501/tclqrencode
