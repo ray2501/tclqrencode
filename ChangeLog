@@ -1,0 +1,64 @@
+2023-12-17  Danilo Chang <ray2501@gmail.com>
+
+    * Setup version to v1.1
+    * Update tclconfig files
+
+2018-07-09  Danilo Chang <ray2501@gmail.com>
+
+    * Setup version to v1.0
+    * Remove _ANSI_ARGS_
+
+2018-03-05  Danilo Chang <ray2501@gmail.com>
+
+    * Setup version to v0.9
+    * Fix merge code error
+    * Setup version to v0.8
+    * Update libqrencode files
+
+2018-03-05  Danilo Chang <ray2501@gmail.com>
+
+    * Setup version to v0.7
+    * Update openSUSE RPM spec
+
+2017-01-03  Danilo Chang <ray2501@gmail.com>
+
+    * Setup version to v0.6
+    * Update TEA files
+
+2016-02-26  Danilo Chang <ray2501@gmail.com>
+
+    * Setup version to v0.5
+    * Add more option check
+
+2016-02-20  Danilo Chang <ray2501@gmail.com>
+
+    * Setup version to v0.4
+    * Update Source code
+
+2016-01-31  Danilo Chang <ray2501@gmail.com>
+
+    * Setup version to v0.3
+    * Update Source code
+
+2014-08-04  Danilo Chang <ray2501@gmail.com>
+
+    * Update code base
+
+2014-03-22  Danilo Chang <ray2501@gmail.com>
+
+    * Add libpng license file libpng-LICENSE.txt
+    * Add libpng files to tclqrencode\win\libpng
+      Libpng dll and lib files built for WIN32 x86 environment.
+    * Add snprintf support under Windows, VS2010 (set flag _MSC_VER)
+    * Add strcasecmp support under Windows, VS2010 (set flag _MSC_VER)
+    * Add RPM spec file tclqrencode_SUSE.spec for openSUSE 13.1
+    * Using Tcl thread function to replace pthread mutex lock/unlock
+      function in qrspec.c and mqrspec.c
+
+2014-03-21  Danilo Chang <ray2501@gmail.com>
+
+    * Copy sample extension files, set tclqnencode ver to 0.1
+    * Add libqrencode license file libqrencode.COPYING
+    * Add libqnencode files to generic folder
+    * Add qrencode.test to tests folder
+

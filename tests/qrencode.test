@@ -1,0 +1,137 @@
+# test --
+#
+#	Tests for tclqrencode
+#------------------------------------------------------------------------------
+
+lappend auto_path .
+if {[lsearch [namespace children] ::tcltest] == -1} {
+    package require tcltest 2
+    namespace import -force ::tcltest::*
+}
+loadTestedCommands
+
+package require tclqrencode
+
+test qrencode_1_1 {
+    Test: qrencode::encode
+} -body {
+    qrencode::setmicro 0
+    qrencode::setsize  5
+    qrencode::setlevel 1
+    qrencode::setdpi   720
+    qrencode::setstructured  0
+    qrencode::setkanji 0
+    qrencode::set8bit_mode 0
+    qrencode::setfiletype svg
+    qrencode::setversion 10
+    qrencode::setforeground  000000
+    qrencode::setbackground  ffffff
+
+
+    qrencode::encode http://www.tcl.tk/ tcl.svg
+
+    if {[file exists tcl.svg]} {
+        file delete tcl.svg
+        set result 1
+    }
+} -result {1}
+
+
+test qrencode_1_2 {
+    Test: qrencode::encode
+} -body {
+    qrencode::setmicro 0
+    qrencode::setsize  5
+    qrencode::setlevel 2
+    qrencode::setdpi   720
+    qrencode::setstructured  0
+    qrencode::setkanji 0
+    qrencode::set8bit_mode 1
+    qrencode::setfiletype png
+    qrencode::setversion 1
+    qrencode::setforeground  000000
+    qrencode::setbackground  ff8fff
+
+
+    qrencode::encode http://www.tcl.tk/ tcl.png
+
+    if {[file exists tcl.png]} {
+        file delete tcl.png
+        set result 1
+    }
+} -result {1}
+
+
+test qrencode_1_3 {
+    Test: qrencode::encode
+} -body {
+    qrencode::setmicro 0
+    qrencode::setsize  5
+    qrencode::setlevel 1
+    qrencode::setdpi   720
+    qrencode::setstructured  0
+    qrencode::setkanji 0
+    qrencode::set8bit_mode 0
+    qrencode::setfiletype eps
+    qrencode::setversion 2
+    qrencode::setforeground  000000
+    qrencode::setbackground  ff8fff
+
+
+    qrencode::encode http://www.tcl.tk/ tcl.eps
+
+    if {[file exists tcl.eps]} {
+        file delete tcl.eps
+        set result 1
+    }
+} -result {1}
+
+test qrencode_1_4 {
+    Test: qrencode::encode
+} -body {
+    qrencode::setmicro 0
+    qrencode::setsize  5
+    qrencode::setlevel 1
+    qrencode::setdpi   720
+    qrencode::setstructured  0
+    qrencode::setkanji 0
+    qrencode::set8bit_mode 0
+    qrencode::setfiletype xpm
+    qrencode::setversion 2
+    qrencode::setforeground  000000
+    qrencode::setbackground  ff8fff
+
+
+    qrencode::encode http://www.tcl.tk/ tcl.xpm
+
+    if {[file exists tcl.xpm]} {
+        file delete tcl.xpm
+        set result 1
+    }
+} -result {1}
+
+test qrencode_1_5 {
+    Test: qrencode::encode
+} -body {
+    qrencode::setmicro 0
+    qrencode::setsize  5
+    qrencode::setlevel 2
+    qrencode::setdpi   720
+    qrencode::setstructured  0
+    qrencode::setkanji 0
+    qrencode::set8bit_mode 1
+    qrencode::setfiletype png32
+    qrencode::setversion 1
+    qrencode::setforeground  000000
+    qrencode::setbackground  ff8fff
+
+
+    qrencode::encode http://www.tcl.tk/ tcl.png
+
+    if {[file exists tcl.png]} {
+        file delete tcl.png
+        set result 1
+    }
+} -result {1}
+
+cleanupTests
