@@ -1101,7 +1101,7 @@ static int qrencodeStructured(const unsigned char *intext, int length, const cha
 }
 
 
-int SETMODE_8BIT (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int SETMODE_8BIT (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     int m_eightbit;
     
@@ -1125,7 +1125,7 @@ int SETMODE_8BIT (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *
 }
 
 
-int SETCASESENSITIVE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int SETCASESENSITIVE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     int m_casesensitive;
     
@@ -1150,7 +1150,7 @@ int SETCASESENSITIVE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_O
 }
 
 
-int SETKANJI (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int SETKANJI (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     int m_hint;
     
@@ -1173,7 +1173,7 @@ int SETKANJI (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONS
 }
 
 
-int SETMICRO (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int SETMICRO (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     int m_micro;
     
@@ -1198,7 +1198,7 @@ int SETMICRO (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONS
 }
 
 
-int SETDPI (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int SETDPI (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     int m_dpi;
     
@@ -1221,7 +1221,7 @@ int SETDPI (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST 
 }
 
 
-int SETLEVEL (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int SETLEVEL (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     int m_level;
     
@@ -1245,7 +1245,7 @@ int SETLEVEL (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONS
 }
 
 
-int SETSIZE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int SETSIZE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     int m_size;
     
@@ -1271,7 +1271,7 @@ int SETSIZE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST
 
 
 
-int SETSTRUCTURED (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int SETSTRUCTURED (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     int m_structured;
     
@@ -1295,10 +1295,10 @@ int SETSTRUCTURED (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj 
 }
 
 
-int SETFILETYPE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int SETFILETYPE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     char *filetype;
-    int len;
+    Tcl_Size len;
     
     if(objc != 2)
     {
@@ -1341,7 +1341,7 @@ int SETFILETYPE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *C
 }
 
 
-int SETVERSION (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int SETVERSION (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     int m_version;
     
@@ -1371,14 +1371,14 @@ int SETVERSION (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CO
 
 
 
-int SETFOREGROUND (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int SETFOREGROUND (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     const char *color = NULL;
-    int len;
+    Tcl_Size len;
     
     if(objc != 2)
     {
-        Tcl_WrongNumArgs(interp, 1, obj, "version");
+        Tcl_WrongNumArgs(interp, 1, obj, "foreground");
         return TCL_ERROR;
     }
     
@@ -1396,14 +1396,14 @@ int SETFOREGROUND (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj 
 
 
 
-int SETBACKGROUND (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int SETBACKGROUND (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     char *color;
-    int len;
+    Tcl_Size len;
     
     if(objc != 2)
     {
-        Tcl_WrongNumArgs(interp, 1, obj, "version");
+        Tcl_WrongNumArgs(interp, 1, obj, "background");
         return TCL_ERROR;
     }    
     
@@ -1421,10 +1421,10 @@ int SETBACKGROUND (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj 
 
 
 
-int QRENCODE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int QRENCODE (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     unsigned char *intext = NULL;  
-    int len = 0;
+    Tcl_Size len = 0;
     char *outfile = NULL;
     int length = 0;
     int result = 0;
