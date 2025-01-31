@@ -15,19 +15,19 @@ Tclqrencode commands and variables
 Tclqrencode is using libqrencode to encode string to be a EPS/PNG/SVG/XPM file.
 
 Implement Tcl commands:  
-qrencode::set8bit_mode  
-qrencode::setcasesensitive  
-qrencode::setkanji  
-qrencode::setmicro  
-qrencode::setdpi  
-qrencode::setlevel  
-qrencode::setsize  
-qrencode::setstructured  
-qrencode::setfiletype  
-qrencode::setversion  
-qrencode::setforeground  
-qrencode::setbackground  
-qrencode::encode  
+::qrencode::set8bit_mode  
+::qrencode::setcasesensitive  
+::qrencode::setkanji  
+::qrencode::setmicro  
+::qrencode::setdpi  
+::qrencode::setlevel  
+::qrencode::setsize  
+::qrencode::setstructured  
+::qrencode::setfiletype  
+::qrencode::setversion  
+::qrencode::setforeground  
+::qrencode::setbackground  
+::qrencode::encode  
 
 
 Install
@@ -63,34 +63,34 @@ Output to file
 
     package require tclqrencode
 
-    qrencode::setmicro 0
-    qrencode::setsize  5
-    qrencode::setlevel 2
-    qrencode::setdpi   720
-    qrencode::setstructured  0
-    qrencode::setkanji 0
-    qrencode::set8bit_mode 1
-    qrencode::setfiletype png
-    qrencode::setversion 1
-    qrencode::setforeground  000000
-    qrencode::setbackground  fff9ff
+    ::qrencode::setmicro 0
+    ::qrencode::setsize  5
+    ::qrencode::setlevel 2
+    ::qrencode::setdpi   720
+    ::qrencode::setstructured  0
+    ::qrencode::setkanji 0
+    ::qrencode::set8bit_mode 1
+    ::qrencode::setfiletype png
+    ::qrencode::setversion 1
+    ::qrencode::setforeground  000000
+    ::qrencode::setbackground  fff9ff
 
-    qrencode::encode https://github.com/ray2501/tclqrencode tclqrencode.png
+    ::qrencode::encode https://github.com/ray2501/tclqrencode tclqrencode.png
 
 Output to stdout
 
     package require tclqrencode
 
-    qrencode::setmicro 0
-    qrencode::setsize  5
-    qrencode::setlevel 2
-    qrencode::setdpi   720
-    qrencode::setstructured  0
-    qrencode::setkanji 0
-    qrencode::set8bit_mode 1
-    qrencode::setfiletype png
-    qrencode::setversion 1
-    qrencode::setforeground  000000
-    qrencode::setbackground  fff9ff
+    ::qrencode::setmicro 0
+    ::qrencode::setsize  5
+    ::qrencode::setlevel 2
+    ::qrencode::setdpi   720
+    ::qrencode::setstructured  0
+    ::qrencode::setkanji 0
+    ::qrencode::set8bit_mode 1
+    ::qrencode::setfiletype png
+    ::qrencode::setversion 1
+    ::qrencode::setforeground  000000
+    ::qrencode::setbackground  fff9ff
 
-    qrencode::encode https://github.com/ray2501/tclqrencode -
+    ::qrencode::encode https://github.com/ray2501/tclqrencode -
